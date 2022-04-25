@@ -15,3 +15,8 @@ spring:
     hibernate:
       ddl-auto: update
     database: postgresql
+    properties:
+      javax:
+        persistence:
+          validation:
+            mode: none

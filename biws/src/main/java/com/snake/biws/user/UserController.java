@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.snake.biws.dto.ResponseDTO;
 import com.snake.biws.exceptions.RequestException;
+import com.snake.biws.user.service.UserService;
 
 
 @RestController

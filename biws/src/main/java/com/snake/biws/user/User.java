@@ -22,7 +22,7 @@ public class User {
 	@GeneratedValue
 	private Long id;
 
-	@NotNull
+	@NotNull(message = "{snake.validation.username.NotNull.message}")
 	@Size(min = 4, max = 20)
 	@UniqueUsername
 	private String username;
@@ -30,7 +30,7 @@ public class User {
 	@NotNull
 	@Size(min = 6, max = 255)
 	//At least one lowercase letter, uppercase letter and digit
-	@Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).*$")
+	@Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).*$", message = "{snake.validation.password.pattern.message}")
 	private String password;
 	
 	@NotNull

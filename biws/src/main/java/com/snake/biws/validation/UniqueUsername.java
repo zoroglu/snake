@@ -14,7 +14,7 @@ import javax.validation.Payload;
 @Constraint(validatedBy = { UniqueUsernameValidator.class})
 public @interface UniqueUsername {
 	
-	String message() default "Same username used before";
+	String message() default "{snake.validation.username.unique.message}";
 
 	Class<?>[] groups() default { };
 
